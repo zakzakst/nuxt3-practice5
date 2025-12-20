@@ -8,7 +8,7 @@ export default defineConfig({
         test: {
           name: 'components',
           include: ['src/tests/components/*.{test,spec}.ts'],
-          environment: 'nuxt',
+          // environment: 'nuxt',
         },
       }),
     ],

@@ -27,12 +27,19 @@
     "@storybook/addon-a11y": "^10.1.10",
     "@storybook/addon-docs": "^10.1.10",
     "@storybook/vue3-vite": "^10.1.10",
+    "@tailwindcss/vite": "^4.1.18",
     "@types/node": "^25.0.3",
     "@vitejs/plugin-vue": "^6.0.3",
     "@vue/test-utils": "^2.4.6",
     "happy-dom": "^20.0.11",
     "nuxt": "^3.20.2",
     "storybook": "^10.1.10",
+    "tailwindcss": "^4.1.18",
     "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.4.0"
   }
 }
