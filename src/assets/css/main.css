@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 
-/* NOTE: main.cssが読み込まれている確認用 */
-/* div {
-  color: red;
-} */
+@theme {
+  --color-solid-gray-420: #949494;
+  --color-solid-gray-536: #767676;
+}

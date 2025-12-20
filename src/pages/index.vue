@@ -1,4 +1,4 @@
 <template>
   <div>TOP</div>
-  <Sample />
+  <Divider color="gray-420" class="border-t-2" />
 </template>
