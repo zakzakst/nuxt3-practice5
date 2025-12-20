@@ -1,4 +1,8 @@
 import type { Preview } from '@storybook/vue3-vite'
+// TODO: storybookにtailwind反映できない
+// import '../src/assets/css/main.css'
+// 下記も試したが、上手くいかない
+// https://github.com/tailwindlabs/tailwindcss/discussions/16809
 
 const preview: Preview = {
   parameters: {
