@@ -1,0 +1,10 @@
+@startuml
+participant User
+participant Web
+participant API
+
+User -> Web: ボタンをクリック
+Web -> API: データをリクエスト
+API --> Web: レスポンスを返す
+Web -> User: 画面を更新
+@enduml

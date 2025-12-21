@@ -1,0 +1,16 @@
+@startuml
+actor User
+participant Web
+participant API
+
+User -> Web: ログイン
+Web -> API: POST /login
+
+alt 認証成功
+    API --> Web: 200 OK
+    Web --> User: マイページ表示
+else 認証失敗
+    API --> Web: 401 Unauthorized
+    Web --> User: エラーメッセージ表示
+end
+@enduml

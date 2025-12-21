@@ -1,0 +1,13 @@
+@startuml
+actor User
+participant "Browser" as B
+participant "Backend API" as API
+database DB
+
+User -> B: ページを開く
+B -> API: Get /articles
+API -> DB: 記事一覧取得
+DB --> API: 記事データ
+API --> B: JSON
+B --> User: 画面表示
+@enduml
