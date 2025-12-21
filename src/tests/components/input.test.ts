@@ -1,6 +1,5 @@
 import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { ref } from 'vue'
 import Input from '../../../src/components/input/Input.vue'
 
 describe('Input', () => {
@@ -37,19 +36,16 @@ describe('Input', () => {
     expect(wrapper.attributes()['aria-invalid']).toBe('true')
   })
 
-  it('modelValueにrefを設定した時にリアクティブになる', async () => {
-    const modelValue = ref('initial')
+  it('v-modelが正しく挙動する', async () => {
     const wrapper = mount(Input, {
       props: {
-        modelValue: modelValue.value,
-        // TODO: 下記の記述ピンときてない。調べる
-        'onUpdate:modelValue': (value: string) => {
-          modelValue.value = value
-        },
+        modelValue: 'initial',
+        // NOTE: 参考
+        // https://test-utils.vuejs.org/guide/advanced/v-model.html#A-Simple-Example
+        'onUpdate:modelValue': (e) => wrapper.setProps({ modelValue: e }),
       },
     })
-    const input = wrapper.find('input')
-    await input.setValue('updated')
-    expect(modelValue.value).toBe('updated')
+    await wrapper.find('input').setValue('updated')
+    expect(wrapper.props('modelValue')).toBe('updated')
   })
 })
