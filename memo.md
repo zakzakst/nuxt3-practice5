@@ -17,8 +17,12 @@
 
 ## 次やる
 
-- Divider のテストコードと story ファイル（variants をどう設計するかも考える）
 - 下記試す
   https://ja.vuejs.org/api/sfc-css-features#v-bind-in-css
+
+## 済
+
+- Divider のテストコードと story ファイル（variants をどう設計するかも考える）
 - storybook の並び順操作試す
   https://github.com/digital-go-jp/design-system-example-components-react/blob/main/.storybook/preview.ts#L19
+  https://storybook.js.org/docs/writing-stories/naming-components-and-hierarchy#sorting-stories

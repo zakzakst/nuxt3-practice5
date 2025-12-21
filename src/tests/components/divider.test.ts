@@ -20,9 +20,9 @@ describe('Divider', () => {
   it('カスタムのクラス名が反映される', () => {
     const wrapper = mount(Divider, {
       props: {
-        class: 'border-t-2',
+        class: 'custom-class',
       },
     })
-    expect(wrapper.classes()).toContain('border-t-2')
+    expect(wrapper.classes()).toContain('custom-class')
   })
 })
