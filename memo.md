@@ -5,6 +5,10 @@
 - https://github.com/unovue/shadcn-vue/blob/dev/apps/v4/registry/new-york-v4/ui/badge/Badge.vue#L3
 - https://cva.style/docs/examples/vue
 
+## 計画図
+
+- https://qiita.com/ryamate/items/3779418172c4f5a83212
+
 ## デザインシステム
 
 - https://github.com/digital-go-jp/design-system-example-components-react/tree/main/src/components
@@ -16,3 +20,5 @@
 - Divider のテストコードと story ファイル（variants をどう設計するかも考える）
 - 下記試す
   https://ja.vuejs.org/api/sfc-css-features#v-bind-in-css
+- storybook の並び順操作試す
+  https://github.com/digital-go-jp/design-system-example-components-react/blob/main/.storybook/preview.ts#L19

@@ -1,6 +1,26 @@
 @import 'tailwindcss';
 
 @theme {
+  --color-solid-gray-50: #f2f2f2;
+  --color-solid-gray-300: #b3b3b3;
   --color-solid-gray-420: #949494;
   --color-solid-gray-536: #767676;
+  --color-solid-gray-600: #666666;
+  --color-solid-gray-800: #333333;
+
+  --color-red-800: #ec0000;
+  --color-red-1000: #a90000;
+
+  /* TODO: red-800と同期させたい */
+  --color-error-1: #ec0000;
+
+  --radius-8: 8px;
+}
+
+/* TODO: ここのハードコーディングやめたい（@applyとか利用？） */
+.font-oln-16N-100 {
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  font-weight: 400;
 }
