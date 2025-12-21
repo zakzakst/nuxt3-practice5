@@ -1,0 +1,44 @@
+@startuml
+participant User
+participant Web
+participant API
+database DB
+
+' 課題
+' - ユーザー登録
+' - メールアドレス重複時はエラー
+' - 最大2回まで再入力できる
+
+' はじめに自分で作成した記述
+' loop 最大2回まで
+'     User -> Web: ユーザー情報入力
+'     Web -> API: POST /signup
+'     API -> DB: ユーザー情報送信
+'     alt 入力されたメールアドレスが既存のものと重複していない
+'         DB --> API: 登録したユーザー情報を返す
+'         API --> Web: 200 OK
+'         Web --> User: ユーザーページ表示
+'     else 入力されたメールアドレスが既存のものと重複している
+'         API --> Web: 401 Unauthorized
+'         Web --> User: エラーメッセージ表示
+'     end
+' end
+
+' 添削後の記述
+loop 最大2回まで
+    User -> Web: ユーザー情報入力
+    Web -> API: POST /signup
+    API -> DB: メールアドレス重複チェック
+
+    alt 重複なし
+        API -> DB: ユーザー登録
+        DB --> API: 登録済みユーザー
+        API --> Web: 201 Created
+        Web --> User: ユーザーページ表示
+    else 重複あり
+        API --> Web: 409 Conflict
+        Web --> User: エラーメッセージ表示
+    end
+end
+
+@enduml

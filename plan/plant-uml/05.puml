@@ -1,0 +1,18 @@
+@startuml
+actor User
+participant Web
+participant API
+
+User -> Web: ログイン情報入力
+
+loop 最大3回まで
+    Web -> API: POST /login
+    API --> Web: 認証結果
+end
+
+alt 認証成功
+    Web --> User: マイページ表示
+else 認証失敗
+    Web --> User: エラーメッセージ表示
+end
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+participant Web
+participant API
+database DB
+
+Web -> API: データ取得
+
+opt キャッシュが存在しない
+    API -> DB: データ問い合わせ
+end
+
+API --> Web: レスポンス
+@enduml
