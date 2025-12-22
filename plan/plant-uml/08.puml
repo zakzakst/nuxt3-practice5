@@ -1,0 +1,21 @@
+@startuml
+class User {
+    id: number
+    email: string
+    password: string
+    --
+    login(): boolean
+    logout(): void
+}
+
+class AuthService {
+    login(email: string, password: string): Token
+}
+
+class UserRepository {
+    findByEmail(email: string): User
+}
+
+AuthService ..> UserRepository
+AuthService --> User
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+actor User
+
+usecase "ユーザー登録" as UC_Signup
+usecase "ログイン" as UC_Login
+usecase "ログアウト" as UC_Logout
+usecase "プロフィール閲覧" as UC_Profile
+
+User --> UC_Signup
+User --> UC_Login
+User --> UC_Logout
+User --> UC_Profile
+
+UC_Signup ..> UC_EmailCheck : <<include>>
+UC_Login ..> UC_TwoFactor : <<extend>>
+@enduml
