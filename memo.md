@@ -1,9 +1,8 @@
 ## 参考
 
 - https://github.com/zakzakst/next-practice5/tree/main/src/components
-- https://github.com/unovue/shadcn-vue/tree/dev/apps/v4/registry/new-york-v4/ui/button
-- https://github.com/unovue/shadcn-vue/blob/dev/apps/v4/registry/new-york-v4/ui/badge/Badge.vue#L3
-- https://cva.style/docs/examples/vue
+- https://github.com/unovue/shadcn-vue/tree/dev/apps/v4/registry/new-york-v4/ui
+- https://github.com/digital-go-jp/design-system-example-components-react/tree/main/src/components
 
 ## 計画図
 
@@ -11,7 +10,6 @@
 
 ## デザインシステム
 
-- https://github.com/digital-go-jp/design-system-example-components-react/tree/main/src/components
 - https://github.com/digital-go-jp/design-tokens/blob/develop/figma/tokens.json
 - https://design.digital.go.jp/dads/react/?path=/docs/documents-%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB--docs
 
@@ -26,3 +24,5 @@
 - storybook の並び順操作試す
   https://github.com/digital-go-jp/design-system-example-components-react/blob/main/.storybook/preview.ts#L19
   https://storybook.js.org/docs/writing-stories/naming-components-and-hierarchy#sorting-stories
+- https://github.com/unovue/shadcn-vue/blob/dev/apps/v4/registry/new-york-v4/ui/badge/Badge.vue#L3
+- https://cva.style/docs/examples/vue
