@@ -1,0 +1,53 @@
+@startuml
+' 課題：A. ユースケース図
+' - User
+' - ユーザー登録
+' - ログイン
+' - ログアウト
+
+' はじめに自分で作成した記述
+actor User
+
+usecase "ユーザー登録" as UC_Signup
+usecase "ログイン" as UC_Login
+usecase "ログアウト" as UC_Logout
+
+User --> UC_Signup
+User --> UC_Login
+User --> UC_Logout
+
+
+' 課題：B. コンポーネント図
+' - Browser
+' - Frontend
+' - Backend API
+' - DB
+
+' はじめに自分で作成した記述
+' component Browser
+' component Frontend
+' component "Backend API" as API
+' database DB
+
+' Browser --> Frontend
+' Frontend --> API
+' API --> DB
+
+' 添削後の記述
+component Browser
+
+rectangle "自社システム" {
+    component "Frontend (Next.js)" as Frontend
+    component "Backend API (Node.js)" as API
+    database DB
+}
+
+rectangle "外部システム" {
+    component "Auth Provider (SSO)" as Auth
+}
+
+Browser --> Frontend
+Frontend --> API
+API --> DB
+API --> Auth
+@enduml

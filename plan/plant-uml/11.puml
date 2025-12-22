@@ -1,0 +1,10 @@
+@startuml
+component "Browser (Next.js)" as Web
+component "Backend API" as API
+database DB
+component "Auth Service" as Auth
+
+Web --> API
+API --> Auth
+API --> DB
+@enduml

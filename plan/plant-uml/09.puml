@@ -1,0 +1,53 @@
+@startuml
+' 課題
+' - ユーザー登録機能
+' - User
+' - SignupService
+' - UserRepository
+' - メールアドレス重複チェックの責務が分かるようにする
+
+' はじめに自分で作成した記述
+' class User {
+'     id: number
+'     email: string
+' }
+
+' class SignupService {
+'     checkEmail(email: string): boolean
+'     login(email: string, password: string): Token
+' }
+
+' class UserRepository {
+'   findByEmail(email: string): User
+' }
+
+' User --> SignupService
+' SignupService ..> UserRepository
+
+
+' 添削後の記述
+' ※とくにUserについて、クラスとactorの区別ができていなかった
+' ※上記に限らず、クラスの理解が不足している部分がある。経験的にそこはしょうがないので、地道に理解していく
+class User {
+    id: number
+    email: string
+}
+
+class SignupService {
+    signup(email: string, password: string): User
+}
+
+note right of SignupService
+- email重複チェック
+- User生成
+- 保存
+end note
+
+class UserRepository {
+    findByEmail(email: string): User
+    save(user: User): void
+}
+
+SignupService ..> UserRepository
+SignupService --> User
+@enduml
