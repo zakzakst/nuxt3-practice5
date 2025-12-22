@@ -1,0 +1,21 @@
+@startuml
+title ログイン処理（メール＋パスワード）
+
+' note top
+' 目的：
+' - ユーザー認証を行う
+' - 成功時はトークンを返却する
+' end note
+
+legend
+この図は以下を示す：
+- ログイン時の通常フロー
+- 認証失敗時は含まない
+end legend
+
+actor User
+participant Browser
+participant API
+database DB
+
+@enduml
