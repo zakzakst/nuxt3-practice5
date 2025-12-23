@@ -1,0 +1,29 @@
+@startuml
+title ユーザー登録フロー（アクティビティ図）
+
+legend
+目的：ユーザー登録処理の全体像を示す
+対象：通常登録フローのみ
+end legend
+
+|User|
+start
+:登録情報入力;
+
+|Frontend|
+:入力値検証;
+
+|Backend|
+if (メール重複?) then (Yes)
+  |Frontend|
+  :エラー表示;
+  stop
+else (No)
+  :ユーザー作成;
+endif
+
+|Frontend|
+:登録完了画面表示;
+stop
+
+@enduml

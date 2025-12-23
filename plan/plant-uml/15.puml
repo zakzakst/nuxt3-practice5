@@ -1,0 +1,13 @@
+@startuml
+title ログイン処理（成功・失敗）
+
+start
+:ログイン情報入力;
+if (認証成功?) then (Yes)
+    :トップページ表示;
+else (No)
+    :エラーメッセージ表示;
+endif
+stop
+
+@enduml

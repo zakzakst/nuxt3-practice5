@@ -15,7 +15,10 @@
 
 ## 次やる
 
-- https://products.sint.co.jp/ober/blog/uml-type
+- https://zenn.dev/comm_vue_nuxt/articles/vue-nexttick
+- https://ja.vuejs.org/guide/built-ins/suspense
+- https://ja.vuejs.org/guide/built-ins/teleport
+- https://www.takatechskill.com/archives/603
 
 ## 済
 
@@ -26,3 +29,4 @@
 - https://github.com/unovue/shadcn-vue/blob/dev/apps/v4/registry/new-york-v4/ui/badge/Badge.vue#L3
 - https://cva.style/docs/examples/vue
 - https://ja.vuejs.org/api/sfc-css-features#v-bind-in-css
+- https://products.sint.co.jp/ober/blog/uml-type
