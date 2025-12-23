@@ -7,11 +7,12 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     size: {
+      type: 'string',
       options: ['lg', 'md', 'sm'],
       control: { type: 'radio' },
-      description: 'インプットテキストの垂直方向のサイズ（高さ）を以下から選択します。',
+      description: 'チェックボックスのサイズを以下から選択します。',
       table: {
-        defaultValue: { summary: 'md' },
+        defaultValue: { summary: 'sm' },
         type: { summary: "'lg', 'md', 'sm'" },
       },
     },
@@ -24,6 +25,7 @@ const meta = {
       },
     },
     class: {
+      type: 'string',
       control: { type: 'text' },
       description: 'クラス（スタイル上書きに利用）',
       table: {
@@ -39,14 +41,6 @@ const meta = {
       },
     },
   },
-  parameters: {
-    docs: {
-      description: {
-        component:
-          'Default では線の太さは`1px`、スタイルは`solid`に設定されています。変更したい場合はクラスを使って上書きしてください。',
-      },
-    },
-  },
 } satisfies Meta<typeof Checkbox>
 
 export default meta
@@ -54,6 +48,15 @@ type Story = StoryObj<typeof meta>
 
 export const Playground: Story = {
   args: {
-    // color: 'gray-420',
+    size: 'sm',
+    isError: false,
   },
+  render: (args) => ({
+    components: { Checkbox },
+    setup() {
+      return { args }
+    },
+    // TODO: ラベル文言をstorybookの入力フォームと連動させる方法が分からない。調べる
+    template: '<Checkbox v-bind="args">チェックボックスのラベル</Checkbox>',
+  }),
 }

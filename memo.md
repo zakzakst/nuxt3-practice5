@@ -17,6 +17,7 @@
 
 - 下記試す
   https://ja.vuejs.org/api/sfc-css-features#v-bind-in-css
+- https://products.sint.co.jp/ober/blog/uml-type
 
 ## 済
 
