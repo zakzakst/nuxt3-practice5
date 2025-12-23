@@ -15,8 +15,6 @@
 
 ## 次やる
 
-- 下記試す
-  https://ja.vuejs.org/api/sfc-css-features#v-bind-in-css
 - https://products.sint.co.jp/ober/blog/uml-type
 
 ## 済
@@ -27,3 +25,4 @@
   https://storybook.js.org/docs/writing-stories/naming-components-and-hierarchy#sorting-stories
 - https://github.com/unovue/shadcn-vue/blob/dev/apps/v4/registry/new-york-v4/ui/badge/Badge.vue#L3
 - https://cva.style/docs/examples/vue
+- https://ja.vuejs.org/api/sfc-css-features#v-bind-in-css

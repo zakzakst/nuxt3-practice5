@@ -2,6 +2,14 @@
 import { ref } from 'vue'
 const inputValue = ref(6)
 const checkedValue = ref(false)
+const bindColor = ref('red')
+const onChangeBindColor = () => {
+  if (bindColor.value === 'red') {
+    bindColor.value = 'blue'
+  } else {
+    bindColor.value = 'red'
+  }
+}
 </script>
 
 <template>
@@ -12,4 +20,12 @@ const checkedValue = ref(false)
   <!-- <Checkbox v-model="checkedValue">Check Label</Checkbox> -->
   <Checkbox v-model="checkedValue" />
   <p>{{ JSON.stringify(checkedValue) }}</p>
+  <p class="bind-color">bind style test</p>
+  <button @click="onChangeBindColor">bind color 変更</button>
 </template>
+
+<style scoped>
+.bind-color {
+  color: v-bind('bindColor');
+}
+</style>
