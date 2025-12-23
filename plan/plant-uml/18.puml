@@ -1,0 +1,24 @@
+@startuml
+title ログイン処理（責務別）
+
+|User|
+start
+:ログイン情報入力;
+
+|Browser|
+:リクエスト送信;
+
+|API|
+:認証処理;
+
+if (成功?) then (Yes)
+    |Browser|
+    :画面遷移;
+    stop
+else (No)
+    |Browser|
+    :エラー表示;
+    stop
+endif
+
+@enduml

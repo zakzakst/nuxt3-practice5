@@ -16,6 +16,10 @@
 ## 次やる
 
 - https://products.sint.co.jp/ober/blog/uml-type
+- https://zenn.dev/comm_vue_nuxt/articles/vue-nexttick
+- https://ja.vuejs.org/guide/built-ins/suspense
+- https://ja.vuejs.org/guide/built-ins/teleport
+- https://www.takatechskill.com/archives/603
 
 ## 済
 

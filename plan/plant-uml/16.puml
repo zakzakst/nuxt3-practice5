@@ -1,0 +1,11 @@
+@startuml
+title ログイン再試行
+
+start
+repeat
+    :ログイン情報入力;
+repeat while (入力ミス) is (Yes)
+:ログイン成功;
+stop
+
+@enduml

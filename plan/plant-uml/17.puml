@@ -1,0 +1,14 @@
+@startuml
+title ログイン後の処理
+
+start
+:ログイン成功;
+fork
+    :ユーザー情報取得;
+fork again
+    :通知設定取得;
+end fork
+:ダッシュボード表示;
+stop
+
+@enduml
