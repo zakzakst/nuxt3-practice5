@@ -65,9 +65,9 @@ export const checkboxLabelVariants = cva('flex w-fit items-start py-2', {
 export const checkboxLabelTextVariants = cva('text-solid-gray-800', {
   variants: {
     size: {
-      sm: 'pt-px text-dns-16N-130',
-      md: 'pt-1 text-dns-16N-130',
-      lg: 'pt-2.5 text-dns-17N-130',
+      sm: 'pt-px font-dns-16N-130',
+      md: 'pt-1 font-dns-16N-130',
+      lg: 'pt-2.5 font-dns-17N-130',
     },
   },
   defaultVariants: {

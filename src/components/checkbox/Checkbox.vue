@@ -28,14 +28,14 @@ const value = computed({
 <template>
   <template v-if="$slots.default">
     <label :class="checkboxLabelVariants({ size })">
-      <span :class="checkboxVariants({ size })">
+      <span :class="checkboxVariants({ size })" data-testid="checkbox-container">
         <input
           v-model="value"
           :class="cn(checkboxInputVariants({ size, isError }), props.class)"
           type="checkbox"
         />
       </span>
-      <span :class="checkboxLabelTextVariants({ size })">
+      <span :class="checkboxLabelTextVariants({ size })" data-testid="checkbox-text">
         <slot />
       </span>
     </label>
