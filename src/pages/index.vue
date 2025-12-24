@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { label } from 'happy-dom/lib/PropertySymbol'
 import { ref } from 'vue'
 const inputValue = ref(6)
 const checkedValue = ref(false)
@@ -23,6 +24,22 @@ const onChangeBindColor = () => {
   <p class="bind-color">bind style test</p>
   <button @click="onChangeBindColor">bind color 変更</button>
   <ErrorText>error text</ErrorText>
+  <Breadcrumbs
+    :items="[
+      {
+        label: 'HOME',
+        href: '/',
+      },
+      {
+        label: 'ユーザー',
+        href: '/user',
+      },
+      {
+        label: '山田太郎',
+        isCurrent: 'page',
+      },
+    ]"
+  />
 </template>
 
 <style scoped>
