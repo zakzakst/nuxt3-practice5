@@ -8,7 +8,7 @@ export const bannerVariants = cva(
   {
     variants: {
       variant: {
-        standard: ' border-[3px] rounded-12',
+        standard: 'border-[3px] rounded-12',
         'color-chip':
           'border-2 !pl-6 shadow-[inset_8px_0_0_0_var(--color-chip-color)] desktop:!pl-10 desktop:shadow-[inset_16px_0_0_0_var(--color-chip-color)]',
       },
