@@ -22,6 +22,7 @@ const onChangeBindColor = () => {
   <p>{{ JSON.stringify(checkedValue) }}</p>
   <p class="bind-color">bind style test</p>
   <button @click="onChangeBindColor">bind color 変更</button>
+  <ErrorText>error text</ErrorText>
 </template>
 
 <style scoped>
