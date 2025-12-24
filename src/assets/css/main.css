@@ -33,8 +33,27 @@
   font-weight: 400;
 }
 
+.font-std-16N-170 {
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
 .font-dns-17N-130 {
   font-size: 1.0625rem;
   line-height: 1.3;
   font-weight: 400;
+}
+
+.font-std-17B-170 {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  font-weight: 700;
+}
+
+.font-std-20B-160 {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  font-weight: 700;
 }
