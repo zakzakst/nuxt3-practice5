@@ -1,15 +1,18 @@
 <script setup lang="ts">
-import { label } from 'happy-dom/lib/PropertySymbol'
 import { ref } from 'vue'
 const inputValue = ref(6)
 const checkedValue = ref(false)
 const bindColor = ref('red')
+const isNotificationShow = ref(true)
 const onChangeBindColor = () => {
   if (bindColor.value === 'red') {
     bindColor.value = 'blue'
   } else {
     bindColor.value = 'red'
   }
+}
+const onNotificationClose = () => {
+  isNotificationShow.value = false
 }
 </script>
 
@@ -40,6 +43,12 @@ const onChangeBindColor = () => {
       },
     ]"
   />
+  <template v-if="isNotificationShow">
+    <NotificationBanner type="success" close-button @close="onNotificationClose">
+      <template #heading><h3>見出し</h3></template>
+      <p>文言</p>
+    </NotificationBanner>
+  </template>
 </template>
 
 <style scoped>
