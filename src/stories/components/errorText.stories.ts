@@ -5,14 +5,27 @@ const meta = {
   title: 'Components/ErrorText',
   component: ErrorText,
   tags: ['autodocs'],
+  argTypes: {
+    class: {
+      type: 'string',
+      control: { type: 'text' },
+      description: 'クラス（スタイル上書きに利用）',
+      table: {
+        defaultValue: { summary: '' },
+      },
+    },
+  },
 } satisfies Meta<typeof ErrorText>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Playground: Story = {
-  render: () => ({
+  render: (args) => ({
     components: { ErrorText },
-    template: '<ErrorText>＊エラーテキスト</ErrorText>',
+    setup() {
+      return { args }
+    },
+    template: '<ErrorText v-bind="args">＊エラーテキスト</ErrorText>',
   }),
 }
