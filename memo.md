@@ -11,6 +11,7 @@
 
 ## 次やる
 
+- https://nuxt.com/docs/3.x/getting-started/testing
 - https://zenn.dev/comm_vue_nuxt/articles/vue-nexttick
 - https://ja.vuejs.org/guide/built-ins/suspense
 - https://ja.vuejs.org/guide/built-ins/teleport
