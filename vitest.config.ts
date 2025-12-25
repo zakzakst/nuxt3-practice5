@@ -11,6 +11,13 @@ export default defineConfig({
           // environment: 'nuxt',
         },
       }),
+      defineVitestProject({
+        test: {
+          name: 'e2e',
+          include: ['src/tests/e2e/*.{test,spec}.ts'],
+          environment: 'nuxt',
+        },
+      }),
     ],
   },
 })
